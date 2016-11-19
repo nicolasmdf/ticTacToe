@@ -1,0 +1,85 @@
+body 
+	background-color: #C0F5DB
+	font-family: 'Delius Unicase', cursive
+	cursor: default
+	user-select: none
+	position: relative
+#board
+	display: flex
+	justify-content: center
+	perspective: 1000px
+	margin: 0
+	width: 50%
+.square
+	box-shadow: 10px 10px 5px #a2b3ff
+	border: #a2b3ff
+	border-radius: 5%
+	min-width: 9vw
+	min-height: 9vw
+	background-color: #C4F593
+	opacity: 0.8
+	margin: 0.4vw 0.3vw	
+.xOrO
+	text-align: center
+	font-size: 6vw
+.score
+	width: 25%
+	text-align: center
+	opacity: 0.8
+#reset
+	position: fixed
+	right: 1vw
+	top: 90%
+	font-size: 2vw
+	opacity: 0.8
+.modal
+	display: initial
+	position: fixed
+	z-index: 1
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: hidden
+	background-color: rgb(0,0,0)
+	background-color: rgba(0,0,0,0.4)
+.modal-content 
+	background-color: #C0F5DB
+	margin: 5% auto
+	padding: 0.5vw
+	border: 1px solid #888
+	width: 18vw
+	min-width: 18vw
+	height: 10.5vw
+#crossInput
+	float: left
+	background-color: #C4F593
+	padding: 1vw 2vw
+	font-size: 5vw
+	box-shadow: 0.3vw 0.3vw 0.3vw #a2b3ff
+	border-radius: 5%
+#circleInput
+	float: right
+	background-color: #C4F593
+	padding: 1vw 2vw
+	font-size: 5vw
+	box-shadow: 0.3vw 0.3vw 0.3vw #a2b3ff
+	border-radius: 5%
+
+
+
+
+.animate
+	animation-name: spinner
+	animation-timing-function: linear
+	animation-iteration-count: 2
+	animation-duration: 0.4s
+
+@keyframes spinner
+	from
+		transform: rotateY(0deg)
+	to
+		transform: rotateY(360deg)
+
+
+/*I initially wanted to make this a pixel art tictactoe, but I decided to leave that as a 2.0 eventually cause I need to focus on actually having this thing working. I was also going to draw the shapes in a class and toggle that class with js, but I decided against that too, using the characters is much simpler and works fine. Im thinking I will animate the tiles and that will be enough to give it a good feel.

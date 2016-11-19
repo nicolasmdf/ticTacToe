@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ticTacToe</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <head> 
+	<link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet">
+</head>
+
+<div class="container-fluid" id="box">
+	<div class="score col-sm-3" id="left">
+		<h1>YOU</h1>
+		<p id="youScore">0</p>
+	</div>
+	<div id="board" class="col-sm-3">
+		<div id="col1">
+			<div class="square" id="s1"><div class="xOrO" id="a">O</div></div>			
+			<div class="square" id="s2"><div class="xOrO" id="b">X</div></div>
+			<div class="square" id="s3"><div class="xOrO" id="c"></div></div>
+		</div>
+		<div id="col2">
+			<div class="square" id="s4"><div class="xOrO" id="d"></div></div>			
+			<div class="square" id="s5"><div class="xOrO" id="e"></div></div>
+			<div class="square" id="s6"><div class="xOrO" id="f"></div></div>
+		</div>
+		<div id="col3">
+			<div class="square" id="s7"><div class="xOrO" id="g"></div></div>			
+			<div class="square" id="s8"><div class="xOrO" id="h"></div></div>
+			<div class="square" id="s9"><div class="xOrO" id="i"></div></div>
+		</div>
+	</div>	
+	<div class="score col-sm-3" id="right">
+		<h1>COMPUTER</h1>
+		<p id="computerScore">0</p>
+	</div>
+</div>
+<span id="reset" class="glyphicon glyphicon-off"></span>
+
+
+
+<div id="inputModal" class="modal">
+  <div class="modal-content">
+		<div id="crossInput">X</div>
+		<div id="circleInput">O</div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
