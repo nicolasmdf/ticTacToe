@@ -53,7 +53,7 @@ $(document).ready(function() {
 				condition.forEach(s => {
 					if (board[s] === "") {
 						computerMove(s);
-						//break;
+						return;
 					}
 				});
 			}
@@ -67,7 +67,7 @@ $(document).ready(function() {
 				condition.forEach((s) => {
 					if (board[s] === "") {
 						computerMove(s);
-						//break;
+						return;
 					} else {
 						 checkToWin();
 					}
