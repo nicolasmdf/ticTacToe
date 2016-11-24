@@ -46,19 +46,37 @@ $(document).ready(function() {
 		});
 	};
 	
-	let ai = () => {
-		if (board.s5 === "") {
-			computerMove("s5");
-		}
-		winningConditions.forEach(condition => {   //check to block
-			let checked = condition.filter(square => board[square] == player);
+	let checkToWin = () => {
+		winningConditions.forEach(condition => {
+			let checked = condition.filter(square => board[square] == computer);
 			if (checked.length === 2) {
-				condition.forEach((s) => board[s] === "" ? computerMove(s) : console.log(s));
+				condition.forEach(s => {
+					if (board[s] === "") {
+						computerMove(s);
+						//break;
+					}
+				});
 			}
 		});
-		
-		
 	};
+	
+	let checkToBlock = () => {
+		winningConditions.forEach(condition => {
+			let checked = condition.filter(square => board[square] == player);
+			if (checked.length === 2) {
+				condition.forEach((s) => {
+					if (board[s] === "") {
+						computerMove(s);
+						//break;
+					} else {
+						 checkToWin();
+					}
+				});
+			}
+		});
+	};
+	
+	let ai = () => board.s5 === "" ? computerMove("s5") : checkToBlock();
 	
 	//take everything back to 0
 	let reset = () => {
