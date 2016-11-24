@@ -4,6 +4,7 @@ body
 	cursor: default
 	user-select: none
 	position: relative
+	overflow: hidden
 #board
 	display: flex
 	justify-content: center
@@ -19,7 +20,6 @@ body
 	background-color: #C4F593
 	opacity: 0.8
 	margin: 0.4vw 0.3vw	
-.xOrO
 	text-align: center
 	font-size: 6vw
 .score
@@ -32,6 +32,8 @@ body
 	top: 90%
 	font-size: 2vw
 	opacity: 0.8
+
+
 .modal
 	display: initial
 	position: fixed
@@ -81,5 +83,3 @@ body
 	to
 		transform: rotateY(360deg)
 
-
-/*I initially wanted to make this a pixel art tictactoe, but I decided to leave that as a 2.0 eventually cause I need to focus on actually having this thing working. I was also going to draw the shapes in a class and toggle that class with js, but I decided against that too, using the characters is much simpler and works fine. Im thinking I will animate the tiles and that will be enough to give it a good feel.
